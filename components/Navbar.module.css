@@ -1,0 +1,73 @@
+/* components/Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menuItem {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    padding: 1rem 0;
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .barOpen {
+    transform: rotate(45deg);
+  }
+
+  .barOpen:nth-child(2) {
+    opacity: 0;
+  }
+
+  .barOpen:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
